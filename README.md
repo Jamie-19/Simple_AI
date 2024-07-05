@@ -8,10 +8,6 @@
 - [Technologies](#technologies)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Folder Structure](#folder-structure)
-- [Configuration](#configuration)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
 
 ## Features
 
@@ -75,3 +71,5 @@ To set up and run the Simple_AI application locally, follow these steps:
 ## Usage
 
 - **Generate Text:** Click the “Generate New Text” button to create new AI-generated text based on a predefined prompt.
+
+## THANKS
