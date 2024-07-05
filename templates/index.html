@@ -9,13 +9,32 @@
 <body>
     <div class="container">
         <h1>AI Content Generator</h1>
-        <form id="prompt-form">
-            <label for="prompt">Enter your prompt:</label>
-            <input type="text" id="prompt" name="prompt" required placeholder="Type your prompt here...">
-            <button type="submit">Generate</button>
-        </form>
-        <h2>Generated Response:</h2>
-        <p id="result"></p>
+        <div class="fullDiv">
+            <div class="promptDiv">
+                <form id="prompt-form" method="post" action="/generate">
+                    <label for="prompt"><b>Enter your text prompt:</b></label>
+                    <input type="text" id="prompt" name="prompt" required placeholder="Type your prompt here..." aria-label="Text Prompt">
+                    <button type="submit">Generate Text</button>
+                </form>
+                <div class="loading" id="loading" style="display: none;">Generating...</div>
+                <div id="error-message" class="error" style="display: none;"></div>
+            </div>
+            <div class="responseDiv">
+                <h2>Generated Response:</h2>
+                <p id="result"></p>
+            </div>
+        </div>
+        <h1>AI Image Generator</h1>
+        <div class="imageDiv">
+            <form id="image-form" method="post" action="/generate_image">
+                <label for="image_prompt"><b>Enter your image prompt:</b></label>
+                <input type="text" id="image_prompt" name="image_prompt" required placeholder="Describe the image you want..." aria-label="Image Prompt">
+                <button type="submit">Generate Image</button>
+            </form>
+            <div id="image-response">
+                <img id="generated-image" src="" alt="Generated Image" style="display: none;">
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
